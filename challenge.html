@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Challenge | IJCAI 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li class="dropdown">
+            <a href="#">Challenge</a>
+            <ul class="dropdown-menu">
+                <li><a href="challenge.html">Evaluate</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+            </ul>
+        </li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="page-content">
+        <div class="card committee-section">
+            <h2 class="section-header"><b>Challenge Significance</b></h2>
+            <p>As deepfake technology advances rapidly, fake images and audio-visual content threaten social security and media credibility. The Deepfake Detection and Localization Challenge (DDL Challenge) aims to:</p>
+            <ul>
+                <li>Enhance detection interpretability by providing intuitive evidence through temporal-spatial localization (e.g., pixel-level tampered areas, forged timestamps).</li>
+                <li>Address multi-modal risks by tackling complex attacks such as "forged audio + authentic video," filling the existing technical gaps.</li>
+                <li>Promote technology inclusivity by providing access to the world's largest multi-modal deepfake dataset (1.8M+ samples), which encompasses 88 forgery techniques.</li>
+            </ul>
+        </div>
+
+        <div class="card committee-section">
+            <h2 class="section-header"><b>Competition Rules and Incentives</b></h2>
+            <h3>1. Participation Guidelines</h3>
+            <h4>a) Model Submission Requirements</h4>
+            <ul>
+                <li>Each track permits only one model submission that must simultaneously address both classification and localization tasks.</li>
+                <li>All models must utilize open-source pre-trained architectures. Teams developing proprietary models during the competition are required to publicly release their model specifications and training protocols under open-source licenses (e.g., MIT, Apache 2.0) during the competition period.</li>
+                <li>Winning solutions must open-source their full implementation, including:
+                    <ul>
+                        <li>Training pipelines and hyperparameter configurations</li>
+                        <li>Evaluation code with reproducibility documentation</li>
+                        <li>Final model weights in standard formats</li>
+                    </ul>
+                </li>
+                <li>Violations of these rules will result in disqualification. The organizing committee reserves final authority over all competition-related matters.</li>
+            </ul>
+            <h3>2. Awards and Recognition</h3>
+            <ul>
+                <li>Monetary prizes: Substantial monetary awards will be granted to top-performing teams across both tracks.</li>
+                <li>Academic recognition: Exceptional solutions will be invited for presentation at the IJCAI.</li>
+            </ul>
+        </div>
+
+        <div class="card committee-section">
+            <h2 class="section-header"><b>Challenge Content</b></h2>
+            <p>This challenge consists of two tracks focusing on detection and localization of deepfake artifacts:</p>
+            <h3>Track 1: Image Detection and Localization (DDL-I)</h3>
+            <ul>
+                <li>Tasks: Real/Fake Classification (Cla) + Spatial Localization (SL).</li>
+                <li>Dataset: Over 1.5 million images covering 61 manipulation techniques, including single-face and multi-face tampering scenarios.</li>
+                <li>Evaluation Metrics: Area Under the ROC Curve (AUC) for detection, F1 Score, and Intersection over Union (IoU) for spatial localization (calculated exclusively for fake samples).</li>
+                <center><img src="images/f1_score.png" style="width: 500px; height: auto;"></center>
+            </ul>
+
+            <h3>Track 2: Audio-Visual Detection and Localization (DDL-AV)</h3>
+            <ul>
+                <li>Tasks: Real/Fake Classification (Cla) + Temporal Localization (TL).</li>
+                <li>Dataset: 300,000+ samples integrating 9 audio manipulation methods and 18 video forgery techniques.</li>
+                <li>Evaluation Metrics: Area Under the ROC Curve (AUC) for detection, Average Precision (AP), and Average Recall (AR) for temporal localization (calculated exclusively for fake samples).</li>
+                <center><img src="images/average_percision.png" style="width: 500px; height: auto;"></center>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Contact: workshop-deepfake@ijcai2025.org</p>
+</footer>
+</body>
+</html>

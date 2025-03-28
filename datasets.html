@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Datasets | IJCAI 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li class="dropdown">
+            <a href="#">Challenge</a>
+            <ul class="dropdown-menu">
+                <li><a href="challenge.html">Evaluate</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+            </ul>
+        </li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <h1 class="page-title">Workshop Datasets</h1>
+    <p>Currently, most deepfake detection datasets focus primarily on binary classification labels and do not provide annotated
+        masks for manipulated regions. This significantly limits the progress in deepfake localization tasks. To address this, we
+        have constructed a large-scale deepfake detection and localization (DDL) dataset that includes both unimodal (image) and multimodal (audio-video) data, covering both visual and
+        temporal task formats. Our dataset overcomes previous limitations related to coarse annotations of manipulated regions
+        and a lack of diversity in manipulation techniques.</p>
+    <!-- DDL-I Dataset Section -->
+    <section class="dataset-section">
+        <div class="dataset-header">
+            <h2>Deepfake Detection and Localization Image (DDL-I) Dataset</h2>
+            <a href="#table1" class="View-btn">View table 1 in detail</a>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const links = document.querySelectorAll('a[href^="#"]');
+                links.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+        <div class="dataset-highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">📊</div>
+                <h3>1.5M+ Samples</h3>
+                <p>Images with pixel-level annotations</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🤖</div>
+                <h3>61 Algorithms</h3>
+                <p>Covering latest generation methods</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🌍</div>
+                <h3>Multi-Scenario</h3>
+                <p>Single & multi-face contexts</p>
+            </div>
+        </div>
+
+        <h3 class="section-subtitle">Key Aspects</h3>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Diverse Forgery Scenarios</h4>
+                <ul>
+                    <li>The dataset covers both single-face and multi-face scenarios, simulating complex forgery content and contexts found in the real world.</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h4>Pixel-level Forgery Regions Annotations</h4>
+                <ul>
+                    <li>It provides detailed pixel-level forgery region mask labels that are preserved during the forgery process. These fine-grained annotations can advance the development of forgery localization tasks. </li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h4>Comprehensive Deepfake Methods</h4>
+                <ul>
+                    <li>We integrated 61 deepfake methods across four major forgery types: face swapping, face reenactment, full-face synthesis, and face editing.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 图片展示 -->
+        <h3 class="section-subtitle">Sample Images</h3>
+        <div class="sample-gallery">
+            <div class="sample-item" align="center">
+                <img src="images/Table1.png" style="max-width: 60%; height: auto;">
+                <p> Figure 1: Examples of the DDL-I dataset. Real row represents the original image. Fake row contains the manipulated image. Mask row
+                    indicates the tampered region labels. Multi-Face Scenario refers to an image with multiple faces where one or more faces have been altered.
+                    Single-Face Scenario involves altering a local region within an image that contains only one face.</p>
+                <!-- <div class="sample-caption">Original</div>-->
+            </div>
+        </div>
+        <!-- Table 1 -->
+        <div class="additional-content" style="margin-top: 2rem;" id="table1">
+            <h3>Table 1</h3>
+            <div class="sample-item" align="center">
+                <h4>Comparison of existing face deepfake datasets</h4>
+            <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="images/Table1_1.png" alt="Table1" style="max-width: 100%; height: auto;">
+        </div>
+                <p> Our DDL-I surpasses others in terms of the diversity of forgery methods, the scale of
+                    fake samples, and the complexity of forgery scenarios. Cla: Binary classification. <br>SL: Spatial forgery localization. Multi-Face: One or more faces in a multi-face image are manipulated.</p>
+        </div>
+    </section>
+    <section class="dataset-docs">
+        <div class="dataset-header">
+            <h2>Deepfake Detection and Localization Audio-Video (DDL-AV) Dataset</h2>
+            <a href="#table2" class="View-btn">View table 2 in detail</a>
+        </div>
+        <p>By incorporating multiple forgery techniques and a large dataset, DDL-AV offers researchers a more challenging and  practical dataset that better simulates complex forgery scenarios in the real world.</p>
+        <div class="doc-cards">
+            <div class="doc-card">
+                <h3>Advancing Audio Forgery Techniques</h3>
+                <p>The dataset includes a suite of state-of-the-art audio forgery technologies, covering various text-to-speech, voice cloning, and voice swapping techniques. This significantly enhances the complexity of audio forgeries. </p>
+            </div>
+            <div class="doc-card">
+                <h3>Comprehensive Visual Forgery Methods</h3>
+                <p>For visual forgery, it integrates cutting-edge methods such as face swapping, facial animation, face attribute editing, and text-to-video generation (AIGC Video). </p>
+            </div>
+            <div class="doc-card">
+                <h3>Diverse Forgery Modes</h3>
+                <p>The dataset includes three forgery modes: fake audio and fake video, fake audio and real video, and real audio and fake video. Notably, it contains a substantial amount of data involving local manipulations with deletion, replacement, and insertion techniques. </p>
+            </div>
+            <div class="doc-card">
+                <h3>Asynchronous Temporal Forgery Type</h3>
+                <p>We innovatively introduce asynchronous temporal forgery types, where audio and video forgery segments occur on different time sequences. </p>
+            </div>
+            <div class="doc-card">
+                <h3>Standardized Data Format</h3>
+                <p>We standardized the data format to ensure compatibility and ease of use, setting it at 25fps frame rate, AAC audio encoding, H.264 video encoding, 224×224 resolution, and stereo audio </p>
+            </div>
+        </div>
+    </section>
+    <!-- 图片展示 -->
+    <h3 class="section-subtitle">Sample Images</h3>
+    <div class="sample-gallery">
+        <div class="sample-item" align="center">
+            <img src="images/Table2.png" style="max-width: 60%; height: auto;">
+            <p> Figure 2: Examples of the DDL-AV dataset. Green color represents
+                real segments and red color represents fake content. Our innovation involves fabricating audio and video content at different time
+                sequences.</p>
+        </div>
+    </div>
+    <!-- Table 2 -->
+    <div class="additional-content" style="margin-top: 2rem;" id="table2">
+        <h3>Table 2</h3>
+        <div class="sample-item" align="center">
+            <h4>Details for publicly available audio-video deepfake datasets in chronological order</h4>
+        <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/Table2_2.png" alt="Table2" style="max-width: 100%; height: auto;">
+    </div>
+            <p style="text-align: center;">Cla: Binary classification, TL: Temporal localization, V: only video modality, A: only audio modality, AV: audio-video multiple modality.</p>
+    </div>
+</main>
+<footer>
+    <p>Contact: deepfake.ijcai2025@gmail.com</p>
+</footer>
+</body>
+</html>
