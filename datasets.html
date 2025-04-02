@@ -164,6 +164,44 @@
     </div>
             <p style="text-align: center;">Cla: Binary classification, TL: Temporal localization, V: only video modality, A: only audio modality, AV: audio-video multiple modality.</p>
     </div>
+        <!-- Image Data Section -->
+        <section class="dataset-section">
+            <div class="dataset-header">
+                <h2>Image Data</h2>
+            </div>
+            <p>In this task, we aim to detect deepfake images and localize deepfake areas with labels and masks access. The data consists of 1.2 million images, divided into three sub-datasets: "real", "fake", and "masks". The "real" sub-dataset contains genuine face images (label=0), while the "fake" sub-dataset holds artificially generated face images (label=1). Each image in the "fake" sub-dataset has a corresponding mask image located in the "masks" sub-dataset, which can be matched using the filename.</p>
+            <h3 class="section-subtitle">Example</h3>
+            <div class="sample-gallery">
+                <div class="sample-item" align="center">
+                    <img src="images/example_image.png" style="max-width: 60%; height: auto;">
+                    <p>Figure: Example from the Image Data dataset illustrating real and fake images along with their masks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio-Video Data Section -->
+        <section class="dataset-section">
+            <div class="dataset-header">
+                <h2>Audio-Video Data</h2>
+            </div>
+            <p>In this task, we aim to detect the deepfake videos and temporal localize the fake segments in the videos with full-level labels access. The data consists of 0.2 million videos, divided into two sub-datasets: "real" and "fake." The "real" sub-dataset contains genuine audiovisual samples where both the audio and visual components are authentic.</p>
+            <p>The "fake" sub-dataset is further categorized into three types of forgeries:</p>
+            <ul>
+                <li><strong>fake_audio_fake_visual:</strong> Here, both audio and visual components are artificially generated.</li>
+                <li><strong>fake_audio_real_visual:</strong> In this case, the audio component is artificially generated, while the visual component is genuine.</li>
+                <li><strong>real_audio_fake_visual:</strong> In this instance, the audio component is genuine, but the visual component is artificially generated.</li>
+            </ul>
+            <p>For each fake video, we provide a corresponding JSON file recording the forged content in detail. Here is an example below.</p>
+            <h3 class="section-subtitle">Example</h3>
+            <div class="sample-gallery">
+                <div class="sample-item" align="center">
+                    <img src="images/example_video.png" style="max-width: 60%; height: auto;">
+                    <p>Figure: Example from the Audio-Video Data dataset showcasing real and fake video segments along with their labels.</p>
+                </div>
+            </div>
+            <p>It is worth noting that all fake segments are included in the "fake segments", while the specific forgery types and corresponding segments are provided above.</p>
+        </section>
+
 </main>
 <footer>
     <p>Contact: deepfake.ijcai2025@gmail.com</p>
