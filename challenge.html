@@ -79,8 +79,45 @@
             </ul>
         </div>
     </div>
-</div>
+<div class="card committee-section">
+    <h2 class="section-header"><b>Submission Formats</b></h2>
 
+    <h3>Image Track Submission Format</h3>
+    <ul>
+        <li><b>Real:</b> The image is real and the corresponding label is 0.</li>
+        <li><b>Fake:</b> The image is fake and the corresponding label is 1.</li>
+        <li><b>Detection:</b> The metrics for this task is the AUC score.</li>
+        <li><b>Localization:</b> The metrics for this task is the IoU score and F1 score.</li>
+        <li>The Final score is the average of the above three scores.</li>
+        <li>The model output should be a single confidence number of the input image being fake and the corresponding predicted manipulated mask. The expected submission format is like below:</li>
+    </ul>
+    <center><img src="images/image_format.png" style="width: 500px; height: auto;"></center>
+    <p>The submitted forlder format is like below:
+        -prediction.txt
+        -mask (folder)
+        -000001.png
+        -000002.png
+        -000003.png
+        ...
+        -xxxxxx.png</p>
+    <p>Note: The size of the predicted mask should be the same as the corresponding original image.</p>
+    <span style="color: red;"><b>Then compress them into a .zip file.</b></span>
+
+    <h3>Audio-Visual Track Submission Format</h3>
+    <ul>
+        <li><b>Real:</b> The video is real, which means there is no fake segment in the video.</li>
+        <li><b>Fake:</b> The video is fake, which means there is at least one fake segment in the video.</li>
+        <li><b>Detection:</b> The metrics for this task is the AUC score.</li>
+        <li><b>Localization:</b> The metrics for this task are AP (Average Precision) and AR (Average Recall).</li>
+        <center><img src="images/audio_format_1.png" style="width: 500px; height: auto;"></center>
+        <P>The Final score is the average of the above two scores.</P>
+        <Li>The model output should be a single confidence number of the input video being fake and the temporal localization of the fake segments in the input video. The expected format is a txt file and a json file with the following structure:</Li>
+    </ul>
+    <center><img src="images/audio_format_2.png" style="width: 500px; height: auto;"></center>
+    <span style="color: red;"><b>Then compress them into a .zip file.</b></span>
+</div>
+</div>
+</div>
 <footer>
     <p>Contact: workshop-deepfake@ijcai2025.org</p>
 </footer>
