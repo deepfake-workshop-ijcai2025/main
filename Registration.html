@@ -19,13 +19,26 @@
         button:hover {
             background-color: #0056b3;
         }
-         .card {
-             background: #f7f9fc;
-             border-radius: 5px;
-             padding: 20px;
-             margin-bottom: 20px;
-             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         }
+        button[disabled] {
+            background-color: #c0c0c0; /* 灰色背景 */
+            color: #7d7d7d; /* 灰色字体 */
+            cursor: not-allowed; /* 显示禁止点击的鼠标控制 */
+        }
+        .card {
+            background: #f7f9fc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px; /* 保持一致的下边距 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .registration-closed {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px; /* 确保与其他卡片间距一致 */
+        }
     </style>
 </head>
 <body>
@@ -47,21 +60,30 @@
 
 <div class="container">
     <div class="page-content">
+        <!-- 新增注册已关闭的通知，并移到最前面 -->
+        <div class="card registration-closed">
+            <h2 class="section-header"><b>Registration Closed</b></h2>
+            <p>
+                🚫 We regret to inform you that the registration for the challenge has now closed. Thank you to all participants who have signed up!
+            </p>
+        </div>
+
         <!-- 新增报名部分 -->
         <div class="card registration-section">
             <h2 class="section-header"><b>Step 1: Register for the Challenge</b></h2>
             <p style="margin-bottom: 1rem;">
                 Don't miss your chance to participate in this exciting competition! Showcase your deepfake detection skills and compete against others.
             </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdndLcehHElQBRhNpDU61IWDdb_UKnZTQbyZp2R775X62JXsA/viewform?usp=sharing" target="_blank">
-                <button>Register Now</button>
+            <a href="#" target="_blank">
+                <button disabled>Register Now</button>
             </a>
             <p style="margin-top: 1rem;">After registering, please follow the next step to complete your registration on Codabench.</p>
         </div>
+
         <div class="card committee-section">
             <h2 class="section-header"><b>Step 2: Register on Codabench Platform</b></h2>
             <p>
-                &#128293;&#128293;&#128293; The challenge will be hosted on the <a style="color: blue;" href=" https://www.codabench.org/competitions/6891/">Codabench platform</a>. Participants will register on this platform, which will provide training and testing data, evaluation scripts, and performance leaderboards.
+                &#128293;&#128293; The challenge will be hosted on the <a style="color: blue;" href="https://www.codabench.org/competitions/6891/">Codabench platform</a>. Participants will register on this platform, which will provide training and testing data, evaluation scripts, and performance leaderboards.
             </p>
             <p>
                 The competition features three tracks:
